@@ -5,7 +5,7 @@
   "repository": "jwoo92/create-react-app",
   "license": "MIT",
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "bugs": {
     "url": "https://github.com/facebook/create-react-app/issues"
@@ -23,6 +23,13 @@
     "react-scripts": "./bin/react-scripts.js"
   },
   "types": "./lib/react-app.d.ts",
+  "scripts": {
+    "build": "node bin/react-scripts.js build",
+    "lint": "node bin/react-scripts.js lint",
+    "start": "node bin/react-scripts.js start",
+    "test": "node bin/react-scripts.js test  --config=template/jest.config.js",
+    "test:ci": "yarn test"
+  },
   "dependencies": {
     "@babel/core": "7.2.2",
     "@svgr/webpack": "4.1.0",
@@ -34,6 +41,7 @@
     "babel-preset-react-app": "^7.0.0",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
+    "chalk": "^2.4.2",
     "css-loader": "1.0.0",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
